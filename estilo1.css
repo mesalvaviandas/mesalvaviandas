@@ -1,0 +1,186 @@
+/*Reset Básico */
+*{
+    margin: 1px;;
+    padding: 1px;;
+    box-sizing:border-box;
+}
+@font-face {
+  font-family: 'TheSeasons';
+  src: url('fonts/TheSeasons-Regular.otf') format('opentype');
+}
+body {
+    font-family:  'TheSeasons', serif;
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight:bold
+}
+/*Estilo general*/
+main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+h1 {
+    color: #2f5e2f;
+    text-align: left;
+    margin-bottom: 30px 0
+}
+/*Estilo botones*/
+.boton-verde {
+    background-color: #2f5e2f;
+    color:white;
+    padding: 18px 20px;
+    margin: 30px 0; /*separación entre botones*/
+    display: inline-block;
+    width: 80%;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10 px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+/*Enlaces sueltos*/
+a {
+    text-decoration: none;
+    color:#2f5e2f;
+    width: 100%;
+}
+a:hover {
+    text-decoration: underline;
+}
+.logo-footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    color:#2f5e2f;
+    font-weight: bold;
+    background-color: #f5f5dc; /*fondo cremita*/
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0,0.1);
+}
+body {
+    font-family: 'TheSeasons', serif;
+    background-image:url(../fondo1.jpg); /* cambiado espacio por %20*/
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    color:#333;
+}
+header {
+  .iconoinstagram {
+    font-size: 50px; /* Aumenta el tamaño del logo */
+    width: 40px; /* Mantiene el ancho */
+    height: 40px; /* Mantiene la altura */
+    color: white; /* Cambia el color a blanco */
+  }
+}
+.pie{
+    color:black;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px;
+}
+.seccion-doble {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color:#2f5e2f
+  }
+  
+  .contenedor-rectangulos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .rectangulo {
+    width: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px #ccc;
+    background-color: #2f5e2f;
+    box-sizing: border-box;
+  }
+ 
+  
+  .texto {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color:#f9f9f9
+    
+  }
+  
+  .imagen img {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+  h1 {
+      margin-bottom: 20px;
+  }
+  /*caja del comentario*/
+  .comentario-box {
+    background-color: #34541a;
+    color: white;                /* texto blanco */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family:  'TheSeasons', serif;
+  }
+  /*area de texto*/
+  .comentario-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  /*boton enviar*/
+  .boton-enviar {
+    background-color: white;
+    color: #4CAF50;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .boton-enviar:hover {
+    background-color: #45a049;
+    color: white;
+    border-color: #45a049;
+  }
+  .slider {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .slider img {
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .slider img:hover {
+    transform: scale(1.05);
+  }
+  /*tabletas*/
+@media(max-width:1024px) {
+}
+

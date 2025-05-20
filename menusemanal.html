@@ -4,23 +4,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-    <a href="index1.html" class="home-link"> Home </a>
+    <a href="index.html" class="home-link"> Home </a>
     
 
 <body>
     <main>
         <div class="logo-footer">Me Salva Viandas </div>
      </main>
-     <div class="slider">
         <div class="slider">
-          <img src="lunes.jpg.jpg" alt="lunes">
-          <img src="martes.jpg.jpg" alt="martes">
-          <img src="miercoles.jpg.jpg" alt="miercoles">
-          <img src="jueves.jpg.jpg" alt="jueves">
-          <img src="viernes.jpg.jpg" alt="viernes">
+          <img src="lunes.jpg-min.jpg" alt="lunes"class= "zoomable">
+          <a href="comprar.html" class="boton-compra">Comprar</a>
         </div>
-      </div>
-    
+         <div class="slider">
+          <img src="martes.jpg-min.jpg" alt="martes" class= "zoomable">
+          <a href="comprar.html" class="boton-compra">Comprar</a>
+         </div>
+         <div class="slider">
+          <img src="miercoles.jpg-min.jpg" alt="miercoles" class= "zoomable">
+          <a href="comprar.html" class="boton-compra">Comprar</a>
+         </div>
+         <div class="slider">
+          <img src="jueves.jpg-min.jpg"alt="jueves" class= "zoomable">
+          <a href="comprar.html" class="boton-compra">Comprar</a>
+         </div>
+        <div class="slider">
+          <img src="viernes.jpg-min.jpg" alt="viernes"class= "zoomable">
+          <a href="comprar.html" class="boton-compra">Comprar</a>
+        </div>  
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Imagen ampliada" id="lightbox-img">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const zoomableImages = document.querySelectorAll('.zoomable');
+
+  zoomableImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('visible');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('visible');
+    lightboxImg.src = '';
+  });
+</script>
+
 </body>
 </html>
       

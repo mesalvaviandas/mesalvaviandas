@@ -20,24 +20,52 @@ main {
     max-width: 1000px;
     margin: auto;
 }
-h1 {
-    color: #2f5e2f;
-    text-align: left;
-    margin-bottom: 30px 0
+.pantalla-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
 }
-/*Estilo botones*/
+
+.contenedor-principal {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+h1 {
+  color: #2f5e2f;
+  font-size: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.contenedor-home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
 .boton-verde {
-    background-color: #2f5e2f;
-    color:white;
-    padding: 18px 20px;
-    margin: 30px 0; /*separación entre botones*/
-    display: inline-block;
-    width: 80%;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 10 px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  background-color: #2f5e2f;
+  color: white;
+  padding: 14px 20px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 50%;
+  max-width: 50%;
+  transition: background-color 0.3s;
+}
+
+.boton-verde:hover {
+  background-color: #45a049;
 }
 /*Enlaces sueltos*/
 a {
@@ -123,6 +151,38 @@ header {
   h1 {
       margin-bottom: 20px;
   }
+
+
+  /* Estilo para la imagen ampliada (lightbox) */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.lightbox.visible {
+  visibility: visible;
+  opacity: 1;
+  cursor: zoom-out;
+}
+
   /*caja del comentario*/
   .comentario-box {
     background-color: #34541a;
@@ -163,29 +223,108 @@ header {
     color: white;
     border-color: #45a049;
   }
-  .slider {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .slider img {
-    width: 500px;
-    height: 250px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .slider img:hover {
-    transform: scale(1.05);
-  }
-body{
-      background-image: url(fondo1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
 }
+
+.slider img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.boton-compra {
+  background-color: #2f5e2f;
+  color: white;
+  padding: 6px 12px;              /* espacio justo alrededor del texto */
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px auto;              /* centrado automático */
+  text-align: center;
+  max-width: 500px;
+  white-space: nowrap;            /* evita que el texto se corte en dos líneas */
+  transition: background-color 0.3s ease;
+}
+
+.boton-compra:hover {
+  background-color: #45a049;
+}
+body {
+  background-image: url(fondo1-min.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.logo-principal {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-principal img {
+    max-width: 200px;
+    height: auto;
+}
+.formulario-contacto {
+  background-color: rgba(255, 255, 255, 0.8); /* blanco translúcido */
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'TheSeasons', serif;
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  color: #2f5e2f;
+  margin-bottom: 20px;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-contacto label {
+  font-weight: bold;
+  color: #333;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'TheSeasons', serif;
+}
+
+.formulario-contacto button {
+  background-color: #2f5e2f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: #45a049;
+}
+
   /*tabletas*/
 @media(max-width:1024px) {
 }

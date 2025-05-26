@@ -1,28 +1,85 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="estilo1.css" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <meta charset="UTF-8">
+  <title>Preguntas Frecuentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo1.css">
+  <style>
+    .accordion {
+      background-color: #2f5e2f;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
 
-    <a href="index.html" class="home-link"> Home </a>
- <body>
-    <main>
-        <h1>Preguntas Frecuentes</h1>
-        <p>
-            <strong>¿Cómo calentar las viandas?</strong><br>
-            Calentar la vianda en el microondas. La otra opción se debe calentar en el horno sin el envase.<br><br>
-    
-            <strong>¿Cómo conservo la vianda?</strong><br>
-            Conservarla en la heladera por 3-5 días. O en el freezer por 3 meses.<br><br>
-    
-            <strong>Punto de retiro</strong><br>
-            Dr Emilio Ravignani 2555, Palermo, Buenos Aires.<br><br>
-    
-            <strong>¿Cuál es el medio de pago?</strong><br>
-            10% de descuento pagando con Transferencia. También se acepta efectivo.
-        </p>
-    </main>
-    <main>
-        <div class="logo-footer">Me Salva Viandas </div>
-     </main>   
- </body>
+    .accordion:hover {
+      background-color: #45a049;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: #f1f1f1;
+      overflow: hidden;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="home-link">Home</a>
+  <main>
+    <h1>Preguntas Frecuentes</h1>
+
+    <button class="accordion">¿Cómo calentar las viandas?</button>
+    <div class="panel">
+      <p>Calentar la vianda en el microondas. La otra opción se debe calentar en el horno sin el envase.</p>
+    </div>
+
+    <button class="accordion">¿Cómo conservo la vianda?</button>
+    <div class="panel">
+      <p>Conservarla en la heladera por 3-5 días. O en el freezer por 3 meses.</p>
+    </div>
+
+    <button class="accordion">Punto de retiro</button>
+    <div class="panel">
+      <p>Dr Emilio Ravignani 2555, Palermo, Buenos Aires.</p>
+    </div>
+
+    <button class="accordion">¿Cuál es el medio de pago?</button>
+    <div class="panel">
+      <p>10% de descuento pagando con Transferencia. También se acepta efectivo.</p>
+    </div>
+  </main>
+
+  <footer class="pie">
+    Me Salva Viandas<br>
+    Founder: Martina Osorio
+  </footer>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(btn => {
+      btn.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

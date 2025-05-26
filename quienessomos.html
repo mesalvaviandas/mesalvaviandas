@@ -11,15 +11,38 @@
         <p>Somos dos hermanas Martina y Catalina, que decidimos transformar un problema en una solución: nos encanta comer rico y saludable, pero el ritmo del trabajo y la facultad nos dejaba sin tiempo para cocinar. Así nació este emprendimiento, con la idea de ofrecer viandas caseras, equilibradas y listas para disfrutar, pensadas para quienes quieren cuidarse sin complicarse.</p>
       </div>
       
-      <div class="rectangulo imagen">
-        <img src="quienes somos-min.jpeg" >
-      </div>
+   
+      <div class="rectangulo imagen carrusel-horizontal">
+  <button class="flecha-izq" onclick="cambiarSlide(-1)">‹</button>
+   <div class="rectangulo imagen">
+<div class="carrusel">
+    <img class="slide" src="quienes somos-min.jpeg" style="display: block;">
+    <img class="slide" src="catuyyo.jpeg" style="display: none;">
+    <img class="slide" src="pollo.jpeg" style="display: none;">
+   </div>
+  </div>
+  <button class="flecha-der" onclick="cambiarSlide(1)">›</button>
+
+  </div>
+
     </div>
   </section>
   <body>
     <main>
       <div class="logo-footer">Me Salva Viandas </div>
    </main>
+   <script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function cambiarSlide(n) {
+    slides[slideIndex].style.display = "none";
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    slides[slideIndex].style.display = "block";
+  }
+</script>
+
+
   </body>
  
 

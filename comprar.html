@@ -3,3 +3,22 @@
     <link rel="stylesheet" href="estilo1.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<body>
+  <main>
+    <section class="formulario-compra">
+      <h2>¡Gracias por elegirnos!</h2>
+        <label for="nombre">Nombre y Apellido:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="pago">Método de pago:</label>
+        <select id="pago" name="pago" required>
+          <option value="">Seleccionar</option>
+          <option value="transferencia">Transferencia bancaria (10% OFF)</option>
+          <option value="efectivo">Efectivo</option>
+        </select>
+
+        <button type="submit">Confirmar compra</button>
+      </form>
+    </section>
+  </main>
+</body>

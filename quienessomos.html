@@ -3,47 +3,56 @@
     <link rel="stylesheet" href="estilo1.css" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-    <a href="index.html" class="home-link"> Home </a>
-    
-    <div class="contenedor-rectangulos">
-      <div class="rectangulo texto">
-        <p>Somos dos hermanas Martina y Catalina, que decidimos transformar un problema en una solución: nos encanta comer rico y saludable, pero el ritmo del trabajo y la facultad nos dejaba sin tiempo para cocinar. Así nació este emprendimiento, con la idea de ofrecer viandas caseras, equilibradas y listas para disfrutar, pensadas para quienes quieren cuidarse sin complicarse.</p>
-      </div>
-      
-   
-      <div class="rectangulo imagen carrusel-horizontal">
-  <button class="flecha-izq" onclick="cambiarSlide(-1)">‹</button>
-   <div class="rectangulo imagen">
-<div class="carrusel">
-    <img class="slide" src="quienes somos-min.jpeg" style="display: block;">
-    <img class="slide" src="catuyyo.jpeg" style="display: none;">
-    <img class="slide" src="pollo.jpeg" style="display: none;">
-   </div>
-  </div>
-  <button class="flecha-der" onclick="cambiarSlide(1)">›</button>
-
-  </div>
-
+<body>
+  <main class="pantalla-home">
+    <div class="logo-principal">
+      <img src="logo3.png" alt="Logo Me Salva Viandas">
     </div>
-  </section>
-  <body>
-    <main>
-      <div class="logo-footer">Me Salva Viandas </div>
-   </main>
-   <script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
 
-  function cambiarSlide(n) {
-    slides[slideIndex].style.display = "none";
-    slideIndex = (slideIndex + n + slides.length) % slides.length;
-    slides[slideIndex].style.display = "block";
-  }
-</script>
+    <section class="seccion-quienes">
+      <div class="volver-home">
+  <a href="index.html" class="boton-volver-home">← Volver al inicio</a>
+</div>
+      <h2 class="frase-emotiva">"Donde el amor por cocinar se convierte en una solución para todos los días"</h2>
 
+      <div class="quienes-carrusel">
+        <div class="slide-show">
+          <div class="slide activo"><img src="quienes somos-min.jpeg" alt="Fundadoras"></div>
+          <div class="slide"><img src="catuyyo-min.jpeg" alt="Preparando viandas"></div>
+          <div class="slide"><img src="pollo-min.jpeg" alt="Vianda lista"></div>
+        </div>
+        <div class="botones-carrusel">
+          <button onclick="moverSlide(-1)">‹</button>
+          <button onclick="moverSlide(1)">›</button>
+        </div>
+      </div>
 
-  </body>
+      <div class="quienes-texto">
+        <p>Somos Martina y Catalina, hermanas y creadoras de este espacio. Nos encanta comer rico y saludable, pero el ritmo del trabajo y la facultad nos dejaba sin tiempo para cocinar. Así nació <strong>Me Salva Viandas</strong>, pensado para quienes quieren cuidarse sin complicarse.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function mostrarSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('activo');
+        if (i === index) slide.classList.add('activo');
+      });
+    }
+
+    function moverSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      mostrarSlide(slideIndex);
+    }
+
+    mostrarSlide(slideIndex);
+  </script>
+</body>
+
  
 
 

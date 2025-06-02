@@ -324,8 +324,202 @@ body {
 .formulario-contacto button:hover {
   background-color: #45a049;
 }
+.section-anuncio-companero{
+  text-align: center;
+  padding: 30px 20px;
+  margin: 40px auto;
+  background-color: #2f5e2f;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  max-width: 1200px;
+  border-radius: 8px
+}
+.section-anuncio-companero h2,
+.section-anuncio-companero p {
+  color:#f9f9f9; 
+  margin-bottom: 15px;
+}
+#anuncio-companero {
+  border: 0;
+  overflow: hidden;
+  display: block;
+  margin: 20px auto;
 
-  /*tabletas*/
-@media(max-width:1024px) {
+  width: 300px;
+  height: 600px;
+  max-width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+.formulario-compra {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  max-width: 500px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'TheSeasons', serif;
+  text-align: center;
 }
 
+.formulario-compra h2 {
+  color: #2f5e2f;
+  margin-bottom: 20px;
+}
+
+.formulario-compra form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.formulario-compra label {
+  font-weight: bold;
+  color: #2f5e2f;
+}
+
+.formulario-compra input,
+.formulario-compra select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'TheSeasons', serif;
+}
+
+.formulario-compra button {
+  background-color: #2f5e2f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.formulario-compra button:hover {
+  background-color: #45a049;
+}
+.agradecimiento-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'TheSeasons', serif;
+  animation: aparecer 1s ease;
+}
+
+.agradecimiento-box h2 {
+  color: #2f5e2f;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.agradecimiento-box p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.boton-volver {
+  background-color: #2f5e2f;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-volver:hover {
+  background-color: #45a049;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.seccion-quienes {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.frase-emotiva {
+  color: #2f5e2f;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.quienes-carrusel {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+}
+
+.slide-show {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.slide.activo {
+  display: block;
+}
+
+.botones-carrusel {
+  margin-top: 10px;
+}
+
+.botones-carrusel button {
+  background-color: #2f5e2f;
+  color: white;
+  border: none;
+  font-size: 22px;
+  padding: 6px 14px;
+  margin: 0 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botones-carrusel button:hover {
+  background-color: #45a049;
+}
+
+.quienes-texto {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #2f5e2f;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+ /*tabletas*/
+@media(max-width:1024px) {
+}

@@ -7,16 +7,23 @@
     <a href="index.html" class="home-link"> Home </a>
 <body>
 
-  <main class="pantalla-home">
-    <h1>Dejanos tu comentario</h1>
-    <div class="comentario-container">
-      <div class="comentario-box">
-        <label for="comentario">Comentario o sugerencia:</label>
-        <textarea id="comentario" name="comentario" placeholder="Escribí acá..."></textarea>
-        <button type="submit" class="boton-enviar">Enviar</button>
-      </div>
+<main class="pantalla-home">
+  <h1>Dejanos tu comentario</h1>
+  <form class="comentario-container" onsubmit="return enviarComentario()">
+    <div class="comentario-box">
+      <label for="comentario">Comentario o sugerencia:</label>
+      <textarea id="comentario" name="comentario" placeholder="Escribí acá..." required></textarea>
+      <button type="submit" class="boton-enviar">Enviar</button>
     </div>
-  </main>
+  </form>
+</main>
+
+<script>
+  function enviarComentario() {
+    alert('¡Gracias por tu comentario!');
+    return false; // Evita que se recargue la página
+  }
+</script>
 
   <footer class="pie">
     Me Salva Viandas<br>

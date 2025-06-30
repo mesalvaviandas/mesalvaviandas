@@ -522,6 +522,91 @@ body {
 .cajaanuncio {
   width: 728px; height: 90px;
 }
+.intro-compra {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 30px auto 0 auto;
+  font-size: 16px;
+  color: #2f5e2f;
+  font-family: 'TheSeasons', serif;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Barra de navegación simple que aparece arriba de la sección de compra.
+   Sirve para mejorar la navegación y que el usuario pueda volver al inicio */
+.navegacion-simple {
+  background-color: #2f5e2f;  /* Fondo verde oscuro */
+  padding: 10px 20px;         /* Espaciado interno */
+  text-align: left;           /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para los enlaces dentro de esa barra de navegación */
+.navegacion-simple a {
+  color: white;              /* Texto blanco */
+  font-weight: bold;         /* Texto en negrita */
+  text-decoration: none;     /* Sin subrayado */
+}
+
+/* Efecto al pasar el mouse: subraya el enlace */
+.navegacion-simple a:hover {
+  text-decoration: underline;
+}
+.pie {
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+.boton-presentacion {
+  display: inline-block;
+  margin-top: 8px;
+  background-color: #2f5e2f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton-presentacion:hover {
+  background-color: #45a049;
+}
+.cta-menu {
+  text-align: center;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-menu p {
+  font-size: 18px;
+  color: #2f5e2f;
+  margin-bottom: 15px;
+}
+
+.boton-cta {
+  background-color: #2f5e2f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton-cta:hover {
+  background-color: #45a049;
+}
+
+
  /*tabletas*/
 @media(max-width:1024px) { .cajaanuncio {
   width: 300px; height: 600px;
